@@ -1,0 +1,28 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: darksalmon;
+    padding: 20px;
+    border-radius: 10px;
+}
+.buttons{
+    display: flex;
+    align-self: center ;
+    justify-content: center;
+}
+
+#count{
+    padding: 10px;
+    font-size: larger;
+}
+button{
+    padding: 10px;
+    font-size: large;
+
+}
