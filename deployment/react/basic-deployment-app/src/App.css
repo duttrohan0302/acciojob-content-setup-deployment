@@ -1,0 +1,29 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App{
+  padding: 20px;
+  background-color: darksalmon;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 20px;
+}
+.counter-component{
+  display: flex;
+  justify-content: center;
+}
+
+.counter-component button{
+  padding: 5px 50px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.counter-component span{
+  padding: 10px;
+  font-size: 30px;
+}
+
