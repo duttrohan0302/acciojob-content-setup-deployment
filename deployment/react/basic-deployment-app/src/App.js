@@ -10,7 +10,7 @@ const App = () => {
     if(storedCount){
       setCount(parseInt(storedCount))
     }
-  },[setCount])
+  })
   
   const incrementCount = () => {
     const newCount = count+1;
