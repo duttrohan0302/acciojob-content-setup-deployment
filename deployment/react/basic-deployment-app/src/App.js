@@ -1,38 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import CounterComponent from "./CounterComponent";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import NotFound from "./NotFound";
+import DummyComponent from "./DummyComponent";
+import Counter from "./Counter";
+import HomePage from "./HomePage";
 
 const App = () => {
-  const [count, setCount] = useState(0);
 
-  useEffect(()=>{
-    const storedCount = localStorage.getItem("count");
-    if(storedCount){
-      setCount(parseInt(storedCount))
-    }
-  })
-  
-  const incrementCount = () => {
-    const newCount = count+1;
-    setCount(newCount);
-    localStorage.setItem("count",newCount);
-  };
-
-  const decrementCount = () => {
-    const newCount = count-1;
-    setCount(newCount);
-    localStorage.setItem("count", newCount)
-  };
-  return (
-    <div className="App">
-      <h1>Counter Application</h1>
-      <CounterComponent
-        count={count}
-        incrementCount={incrementCount}
-        decrementCount={decrementCount}
-      />
-    </div>
-  );
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route element={<HomePage />} path="/"/>
+        <Route element={<Counter />} path="/counter"/>
+        <Route element={<DummyComponent />} path="/dummy" />
+        <Route element={<NotFound />} path="/404" />
+      </Routes>
+    </BrowserRouter>
+  )
 }
-
 export default App;

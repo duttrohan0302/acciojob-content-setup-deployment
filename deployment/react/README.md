@@ -28,4 +28,8 @@
     <pre>
     netlify deploy --prod
     </pre>
+- If in case you're using React Router and the deployment is not working properly, create a file named _redirects in the public directory with the following content
+    <pre>
+    /* /index.html 200
+    </pre>
 ### For mac for linux, If any commands give any auth error, put sudo before the command
