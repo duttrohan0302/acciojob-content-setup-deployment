@@ -3,7 +3,17 @@
 ## Deploying using Netlify UI
 ### Things to remember
 - This method gives trouble when your react app is in a subfolder in the git repo, so prefer terminal method for that
-
+- Go to Netlify
+- Deploy a new wesbite
+- Connect it with the github repo
+- Give the base directory(It's better if your code is in the root itself)
+- Build command => npm run build
+- If ever you get this error 
+    - Treating warnings as errors because process.env.CI = true.
+    - Just edit the build command in the deployment settings to the following
+    <pre>
+    CI=false npm run build
+    </pre>
 
 ## Deploying using Terminal
 - Run the following command in a cmd/terminal
