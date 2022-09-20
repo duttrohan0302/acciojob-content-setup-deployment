@@ -4,12 +4,13 @@ import Tab from "./Tab";
 function Tabs(props){
 
     const tabsLocal = props.myTabs;
+    const setSelectedPage = props.setSelectedPage;
 
     return(
         <div className="tabs">
             {
                 tabsLocal.map((tabName,index)=>(
-                    <Tab key={index} tabData={tabName} />
+                    <Tab key={index} tabData={tabName} setSelectedPage={setSelectedPage}/>
                 ))
             }
         </div>
